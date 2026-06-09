@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Journey from './components/Journey';
+import Education from './components/Education';
 import Skills from './components/Skills';
 import Services from './components/Services';
 import Projects from './components/Projects';
@@ -51,6 +52,9 @@ export default function App() {
 
         {/* Experience & Rebranded Break Timeline */}
         <Journey darkMode={darkMode} />
+
+        {/* Education & Credentials Board */}
+        <Education darkMode={darkMode} />
 
         {/* Technical Skills Board */}
         <Skills darkMode={darkMode} />

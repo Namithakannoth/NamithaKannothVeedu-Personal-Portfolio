@@ -20,6 +20,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'Journey', href: '#journey' },
+    { name: 'Education', href: '#education' },
     { name: 'Skills', href: '#skills' },
     { name: 'Services', href: '#services' },
     { name: 'Projects', href: '#projects' },
