@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import { Mail, Phone } from 'lucide-react';
 import Linkedin from './components/LinkedinIcon';
+import Github from './components/GithubIcon';
 
 export default function App() {
   // Try to load initial theme from localStorage, default to dark (true)
@@ -89,6 +90,15 @@ export default function App() {
               aria-label="LinkedIn"
             >
               <Linkedin size={16} />
+            </a>
+            <a 
+              href="https://github.com/Namithakannoth" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-indigo-500 transition-colors"
+              aria-label="GitHub"
+            >
+              <Github size={16} />
             </a>
             <a 
               href="mailto:namithakv605@gmail.com" 

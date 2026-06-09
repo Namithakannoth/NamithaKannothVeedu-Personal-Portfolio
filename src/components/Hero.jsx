@@ -1,5 +1,6 @@
 import { Mail, Phone, FileText, ArrowRight, ShieldCheck } from 'lucide-react';
 import Linkedin from './LinkedinIcon';
+import Github from './GithubIcon';
 
 export default function Hero({ darkMode }) {
   return (
@@ -93,6 +94,19 @@ export default function Hero({ darkMode }) {
             title="LinkedIn"
           >
             <Linkedin size={20} />
+          </a>
+          <a
+            href="https://github.com/Namithakannoth"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`p-3 rounded-full transition-all duration-300 border hover:scale-110 hover:-translate-y-1 ${
+              darkMode 
+                ? 'border-slate-800 bg-slate-900/50 text-slate-400 hover:text-indigo-400 hover:border-indigo-500/30 shadow-md shadow-slate-950/20' 
+                : 'border-slate-200 bg-slate-50 text-slate-600 hover:text-indigo-600 hover:border-indigo-200 shadow-sm'
+            }`}
+            title="GitHub"
+          >
+            <Github size={20} />
           </a>
           <a
             href="mailto:namithakv605@gmail.com"

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
 import Linkedin from './LinkedinIcon';
+import Github from './GithubIcon';
 
 export default function Contact({ darkMode }) {
   const [formData, setFormData] = useState({
@@ -184,6 +185,34 @@ export default function Contact({ darkMode }) {
                       darkMode ? 'text-slate-300' : 'text-slate-700'
                     }`}>
                       linkedin.com/in/namithakannoth
+                    </span>
+                  </div>
+                </a>
+
+                {/* GitHub */}
+                <a 
+                  href="https://github.com/Namithakannoth"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 group cursor-pointer"
+                >
+                  <span className={`p-3 rounded-xl transition-all duration-300 ${
+                    darkMode 
+                      ? 'bg-slate-800/50 text-indigo-400 group-hover:bg-indigo-500/10 group-hover:text-indigo-300' 
+                      : 'bg-slate-100 text-indigo-600 group-hover:bg-indigo-50 group-hover:text-indigo-700'
+                  }`}>
+                    <Github size={18} />
+                  </span>
+                  <div>
+                    <span className={`block text-xs font-semibold uppercase tracking-wider ${
+                      darkMode ? 'text-slate-500' : 'text-slate-400'
+                    }`}>
+                      GitHub
+                    </span>
+                    <span className={`text-sm font-medium transition-colors group-hover:text-indigo-500 ${
+                      darkMode ? 'text-slate-300' : 'text-slate-700'
+                    }`}>
+                      github.com/Namithakannoth
                     </span>
                   </div>
                 </a>
