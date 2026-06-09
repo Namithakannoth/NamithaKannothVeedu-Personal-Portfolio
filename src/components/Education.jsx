@@ -1,25 +1,27 @@
-import { GraduationCap, Award } from 'lucide-react';
+import { GraduationCap, Award, Calendar } from 'lucide-react';
 
 export default function Education({ darkMode }) {
-  const educationItems = [
+  const academics = [
     {
       degree: 'Master of Computer Application (MCA)',
       period: '2015 – 2018',
-      description: 'Advanced curriculum in software engineering, database management systems, object-oriented design, and algorithms.'
+      institution: 'University Graduate Studies', // standard placeholder for MCA
+      details: 'Focused on advanced algorithms, software engineering principles, database management systems, and web application design.'
     },
     {
       degree: 'Bachelor of Computer Application (BCA)',
       period: '2012 – 2015',
-      description: 'Foundational study in programming paradigms, data structures, web technologies, and systems analysis.'
+      institution: 'Undergraduate Studies', // standard placeholder for BCA
+      details: 'Acquired foundation in computer systems architecture, programming fundamentals (C/C++, Java), data structures, and responsive layouts.'
     }
   ];
 
-  const certificationItems = [
+  const certifications = [
     {
-      title: 'Capgemini Certified Web Developer (Python & Ruby on Rails)',
-      provider: 'Edu Bridge',
+      title: 'Capgemini Certified Web Developer',
+      provider: 'Edu Bridge Program',
       period: '2020 – 2021',
-      description: 'Rigorous professional training program centered on backend development, MVC application architectures, databases, and full-stack software development.'
+      details: 'Rigorous technical boot camp training specialized in Python backend development, Ruby on Rails MVC frameworks, and full-stack integration methodologies.'
     }
   ];
 
@@ -30,10 +32,6 @@ export default function Education({ darkMode }) {
         darkMode ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-800'
       }`}
     >
-      {/* Background glow highlights */}
-      <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[350px] h-[350px] bg-indigo-500/5 rounded-full blur-3xl pointer-events-none animate-pulse-slow" />
-
       <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
         
         {/* Section Heading */}
@@ -42,98 +40,97 @@ export default function Education({ darkMode }) {
             Education & Credentials
           </h2>
           <p className={`text-base max-w-2xl mx-auto ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-            My academic foundation and professional certifications supporting my frontend expertise.
+            My academic foundations and professional certifications.
           </p>
         </div>
 
-        {/* Layout Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        {/* Dual Layout Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           
-          {/* Education Column */}
-          <div className="space-y-6">
-            <div className="flex items-center gap-3 mb-6">
+          {/* Academic Degrees */}
+          <div>
+            <div className="flex items-center gap-3 mb-8">
               <span className={`p-2.5 rounded-xl ${
-                darkMode ? 'bg-slate-900 border border-slate-800 text-indigo-400' : 'bg-white border border-slate-200 text-indigo-600 shadow-sm'
+                darkMode ? 'bg-slate-900/50 text-indigo-400' : 'bg-slate-100 text-indigo-600'
               }`}>
                 <GraduationCap className="w-6 h-6" />
               </span>
-              <h3 className="text-xl font-bold tracking-tight">Academic Degrees</h3>
+              <h3 className="text-xl font-bold tracking-tight">Academic History</h3>
             </div>
 
-            {educationItems.map((item, idx) => (
-              <div 
-                key={idx}
-                className={`p-6 sm:p-8 rounded-2xl border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 ${
-                  darkMode 
-                    ? 'bg-slate-900/30 border-slate-800/80 hover:border-indigo-500/30 hover:bg-slate-900/55 shadow-md shadow-slate-950/20' 
-                    : 'bg-white border-slate-200/80 hover:border-indigo-200 hover:bg-slate-50/50 shadow-sm'
-                }`}
-              >
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                  <h4 className="text-base font-bold tracking-tight">
-                    {item.degree}
-                  </h4>
-                  <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold self-start sm:self-center ${
+            <div className="space-y-6">
+              {academics.map((edu, idx) => (
+                <div 
+                  key={idx}
+                  className={`p-6 rounded-2xl border transition-all duration-300 hover:scale-[1.01] ${
                     darkMode 
-                      ? 'bg-slate-800/80 text-indigo-300 border border-slate-700/50' 
-                      : 'bg-indigo-50 text-indigo-700 border border-indigo-100/50'
-                  }`}>
-                    {item.period}
-                  </span>
+                      ? 'bg-slate-900/30 border-slate-800/80 hover:border-indigo-500/30 hover:bg-slate-900/50 shadow-md shadow-slate-950/20' 
+                      : 'bg-white border-slate-200/85 hover:border-indigo-200 hover:bg-slate-50/50 shadow-sm'
+                  }`}
+                >
+                  <div className="flex items-center justify-between gap-4 mb-3">
+                    <h4 className="text-base font-bold text-indigo-500 dark:text-indigo-400">
+                      {edu.degree}
+                    </h4>
+                    <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold ${
+                      darkMode ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-600'
+                    }`}>
+                      <Calendar size={12} />
+                      {edu.period}
+                    </span>
+                  </div>
+                  <p className={`text-sm mb-2 font-semibold ${darkMode ? 'text-slate-300' : 'text-slate-700'}`}>
+                    {edu.institution}
+                  </p>
+                  <p className={`text-xs leading-relaxed ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+                    {edu.details}
+                  </p>
                 </div>
-                <p className={`text-sm leading-relaxed ${
-                  darkMode ? 'text-slate-400' : 'text-slate-600'
-                }`}>
-                  {item.description}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
-          {/* Certifications Column */}
-          <div className="space-y-6">
-            <div className="flex items-center gap-3 mb-6">
+          {/* Certifications */}
+          <div>
+            <div className="flex items-center gap-3 mb-8">
               <span className={`p-2.5 rounded-xl ${
-                darkMode ? 'bg-slate-900 border border-slate-800 text-purple-400' : 'bg-white border border-slate-200 text-purple-600 shadow-sm'
+                darkMode ? 'bg-slate-900/50 text-purple-400' : 'bg-slate-100 text-purple-600'
               }`}>
                 <Award className="w-6 h-6" />
               </span>
               <h3 className="text-xl font-bold tracking-tight">Professional Certifications</h3>
             </div>
 
-            {certificationItems.map((item, idx) => (
-              <div 
-                key={idx}
-                className={`p-6 sm:p-8 rounded-2xl border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 ${
-                  darkMode 
-                    ? 'bg-slate-900/30 border-slate-800/80 hover:border-purple-500/30 hover:bg-slate-900/55 shadow-md shadow-slate-950/20' 
-                    : 'bg-white border-slate-200/80 hover:border-purple-200 hover:bg-slate-50/50 shadow-sm'
-                }`}
-              >
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                  <h4 className="text-base font-bold tracking-tight">
-                    {item.title}
-                  </h4>
-                  <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold self-start sm:self-center ${
+            <div className="space-y-6">
+              {certifications.map((cert, idx) => (
+                <div 
+                  key={idx}
+                  className={`p-6 rounded-2xl border transition-all duration-300 hover:scale-[1.01] ${
                     darkMode 
-                      ? 'bg-slate-800/80 text-purple-300 border border-slate-700/50' 
-                      : 'bg-purple-50 text-purple-700 border border-purple-100/50'
-                  }`}>
-                    {item.period}
-                  </span>
+                      ? 'bg-gradient-to-br from-indigo-950/20 to-purple-950/20 border-purple-500/20 hover:border-purple-500/40 shadow-md shadow-slate-950/20' 
+                      : 'bg-gradient-to-br from-indigo-50/30 to-purple-50/30 border-purple-100 hover:border-purple-300 shadow-sm'
+                  }`}
+                >
+                  <div className="flex items-center justify-between gap-4 mb-3">
+                    <h4 className="text-base font-bold text-purple-500 dark:text-purple-400">
+                      {cert.title}
+                    </h4>
+                    <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold ${
+                      darkMode ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-600'
+                    }`}>
+                      <Calendar size={12} />
+                      {cert.period}
+                    </span>
+                  </div>
+                  <p className={`text-sm mb-2 font-semibold ${darkMode ? 'text-slate-300' : 'text-slate-700'}`}>
+                    {cert.provider}
+                  </p>
+                  <p className={`text-xs leading-relaxed ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+                    {cert.details}
+                  </p>
                 </div>
-                <div className={`text-xs font-semibold mb-3 tracking-wide uppercase ${
-                  darkMode ? 'text-slate-500' : 'text-slate-400'
-                }`}>
-                  Provider: {item.provider}
-                </div>
-                <p className={`text-sm leading-relaxed ${
-                  darkMode ? 'text-slate-400' : 'text-slate-600'
-                }`}>
-                  {item.description}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
         </div>
