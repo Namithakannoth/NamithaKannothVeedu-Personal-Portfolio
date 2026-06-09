@@ -43,7 +43,7 @@ export default function Hero({ darkMode }) {
         <p className={`text-base sm:text-lg max-w-3xl mb-10 leading-relaxed font-normal animate-fade-in-up ${
           darkMode ? 'text-slate-400' : 'text-slate-600'
         }`} style={{ animationDelay: '0.3s' }}>
-          Performance-driven developer with <strong>4+ years of professional and freelance experience</strong> engineering responsive, accessible, and user-focused web interfaces. Specialized in <strong>React.js</strong>, <strong>TypeScript</strong>, <strong>Redux/State Management</strong>, and <strong>Tailwind CSS</strong>, with a proven track record of reducing developer overhead, integrating REST APIs, and delivering scalable codebases.
+          Performance-driven developer with <strong>2+ years of professional and freelance experience</strong> engineering responsive, accessible, and user-focused web interfaces. Specialized in <strong>React.js</strong>, <strong>TypeScript</strong>, <strong>Redux/State Management</strong>, and <strong>Tailwind CSS</strong>, with a proven track record of reducing developer overhead, integrating REST APIs, and delivering scalable codebases.
         </p>
 
         {/* CTA Buttons */}
