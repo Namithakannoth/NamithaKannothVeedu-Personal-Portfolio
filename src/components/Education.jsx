@@ -18,6 +18,13 @@ export default function Education({ darkMode }) {
 
   const certifications = [
     {
+      title: 'Data Analytics Course',
+      provider: 'NextLeap',
+      period: '2026 – Present',
+      status: 'In Progress',
+      details: 'Engaging in a project-led fellowship focused on product analytics, SQL query optimization, Python-based data manipulation (Pandas, NumPy), and interactive dashboards using Tableau.'
+    },
+    {
       title: 'Capgemini Certified Web Developer',
       provider: 'Edu Bridge Program',
       period: '2020 – 2021',
@@ -68,11 +75,11 @@ export default function Education({ darkMode }) {
                       : 'bg-white border-slate-200/85 hover:border-indigo-200 hover:bg-slate-50/50 shadow-sm'
                   }`}
                 >
-                  <div className="flex items-center justify-between gap-4 mb-3">
+                  <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-3">
                     <h4 className="text-base font-bold text-indigo-500 dark:text-indigo-400">
                       {edu.degree}
                     </h4>
-                    <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold ${
+                    <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap self-start sm:self-auto ${
                       darkMode ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-600'
                     }`}>
                       <Calendar size={12} />
@@ -111,11 +118,19 @@ export default function Education({ darkMode }) {
                       : 'bg-gradient-to-br from-indigo-50/30 to-purple-50/30 border-purple-100 hover:border-purple-300 shadow-sm'
                   }`}
                 >
-                  <div className="flex items-center justify-between gap-4 mb-3">
-                    <h4 className="text-base font-bold text-purple-500 dark:text-purple-400">
-                      {cert.title}
-                    </h4>
-                    <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold ${
+                  <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-3">
+                    <div className="space-y-1.5">
+                      <h4 className="text-base font-bold text-purple-500 dark:text-purple-400">
+                        {cert.title}
+                      </h4>
+                      {cert.status && (
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-emerald-500/10 text-emerald-500 dark:text-emerald-400 border border-emerald-500/20 animate-pulse w-fit">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                          {cert.status}
+                        </span>
+                      )}
+                    </div>
+                    <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap self-start sm:self-auto ${
                       darkMode ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-600'
                     }`}>
                       <Calendar size={12} />
