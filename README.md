@@ -1,15 +1,19 @@
-# Personal Profile Website (Earlier Version)
+# Namitha Kannoth Veedu – Frontend Developer Portfolio
 
-An earlier version of my personal portfolio, built with React and Vite. My current portfolio is here:
-**https://namitha-kannoth-veedu-personal-port.vercel.app/**
+My personal portfolio, showing my frontend experience, projects, skills and CV.
+
+**Live site:** https://namitha-kannoth-veedu-personal-port.vercel.app/
 
 ## Tech stack
-React.js · Vite · CSS · Font Awesome · react-anchor-link-smooth-scroll
+React.js · Vite · Tailwind CSS · Lucide React icons · ESLint · Deployed on Vercel
 
 ## Features
-- Single-page layout with Home, About, Services, Experience and Contact sections
-- Smooth-scroll navigation and a responsive mobile menu
-- Experience and services rendered from reusable data files
+- Responsive, mobile-first layout
+- Light and dark mode
+- Sections for professional journey, education, skills, services, projects and contact
+- Expandable experience timeline
+- Downloadable CV
+- Accessibility and responsiveness improvements made in phases
 
 ## Run locally
 ```bash
@@ -17,3 +21,9 @@ npm install
 npm run dev
 ```
 
+## Note on client projects
+The client and internship projects shown on the site (such as the Sequence Diagram Editor, TrumpCore, AroyaLife and GM4) were built for employers and clients, so their source code is private. The portfolio describes my role and the technologies used.
+
+## Contact
+- LinkedIn: https://www.linkedin.com/in/namithakannoth
+- Email: namithakv605@gmail.com
