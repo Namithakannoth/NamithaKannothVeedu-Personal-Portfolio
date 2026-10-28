@@ -22,7 +22,7 @@ export default function Education({ darkMode }) {
       provider: 'NextLeap',
       period: '2026 – Present',
       status: 'In Progress',
-      details: 'Engaging in a project-led fellowship focused on product analytics, SQL query optimization, Python-based data manipulation (Pandas, NumPy), and interactive dashboards using Tableau.'
+      details: 'Currently completing a project-based data analytics programme covering Excel, SQL, Python (pandas) and Power BI dashboards.'
     },
     {
       title: 'Capgemini Certified Web Developer',

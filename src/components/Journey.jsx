@@ -10,24 +10,24 @@ export default function Journey({ darkMode }) {
       period: 'Feb 2026 – Mar 2026',
       icon: <Briefcase className="w-5 h-5" />,
       bullets: [
-        'Engineered a diagramming utility using TypeScript and Tailwind CSS, reducing diagram creation times for ProcessPro users by 18%.',
-        'Built a modular component library, improving code reusability and decreasing frontend inconsistencies by 25%.',
-        'Collaborated in Agile Git-based sprints, resolving 15+ complex frontend bugs and UI refactoring tasks per week.',
-        'Enhanced responsiveness and rendering metrics of internal reporting dashboards to ensure optimal cross-device usability.',
-        'Worked with senior engineers to implement client-side data serialization and diagram exports.'
+        'Built a UML sequence diagram editor for the ProcessPro platform in React.js and TypeScript, from initial setup through to production deployment.',
+        'Engineered real-time synchronisation between the code editor and visual canvas, with drag-and-drop editing, zoom controls, saved sessions and PNG/SVG export.',
+        'Designed a reusable UI component library in TypeScript and Tailwind CSS, standardising the look and feel across 3+ internal tools.',
+        'Enhanced the usability of internal reporting tools through responsive UI improvements and targeted debugging.',
+        'Collaborated in an Agile team through GitHub workflows, raising pull requests, taking part in code reviews and presenting weekly progress to my manager.'
       ]
     },
     {
-      role: 'Continuous Professional Development / Childcare Break',
-      company: 'Self-Driven / Runwood Homes (Part-Time)',
+      role: 'Career Break (Childcare) & Self-Directed Learning',
+      company: 'Alongside part-time work as a Healthcare Assistant (Runwood Homes)',
       location: 'United Kingdom',
-      period: 'Jan 2023 – Present',
+      period: 'Oct 2022 – Jan 2026',
       icon: <UserCheck className="w-5 h-5" />,
       highlight: true,
       bullets: [
-        'Executed a planned childcare break while dedicating 15+ hours/week to advanced technical learning in React.js, TypeScript, and state management (Redux Toolkit).',
-        'Developed 4+ complex responsive applications (including a Sequence Canvas editor and tournament register portals) to master Vite configurations, custom React Hooks, and REST API integrations.',
-        'Maintained absolute currency with the modern frontend ecosystem, centering on web accessibility (WCAG), performance auditing, and Git workflows.'
+        'Took a planned career break for childcare while continuing to study the React ecosystem, TypeScript and state management (Redux).',
+        'Built personal projects, including this portfolio (React, Vite, Tailwind CSS), to practise component design, REST API integration and Git workflows.',
+        'Kept up to date with modern frontend practice, including web accessibility (WCAG basics) and responsive design.'
       ]
     },
     {
@@ -37,10 +37,9 @@ export default function Journey({ darkMode }) {
       period: 'Jan 2022 – Oct 2022',
       icon: <Briefcase className="w-5 h-5" />,
       bullets: [
-        'Architected mobile-first user interfaces and responsive layouts using React.js, boosting mobile user satisfaction scores by 12%.',
-        'Integrated frontend views with secure REST API endpoints and backend services, achieving seamless data synchronization.',
-        'Refactored legacy React architectures, improving load metrics by 20% and resolving cross-browser rendering discrepancies.',
-        'Performed thorough unit testing and debugged layout issues, substantially improving application core stability.'
+        'Developed the frontends of two client web applications in React.js and JavaScript: a banking management system (TrumpCore) and a healthcare platform (AroyaLife).',
+        'Built mobile-first interfaces integrated with REST APIs and backend services to deliver dynamic, data-driven features.',
+        'Carried out systematic testing, debugging and issue resolution across multiple releases.'
       ]
     },
     {
@@ -50,9 +49,8 @@ export default function Journey({ darkMode }) {
       period: 'Apr 2021 – Dec 2021',
       icon: <Briefcase className="w-5 h-5" />,
       bullets: [
-        'Programmed responsive business websites utilizing React.js, JavaScript, and CSS, ensuring pixel-perfect layout fidelity.',
-        'Conducted comprehensive debugging and layout optimizations, raising client Lighthouse performance and SEO scores to 95+.',
-        'Coordinated with cross-functional development teams during design iterations, speeding up product delivery timelines by 10%.'
+        'Delivered responsive websites using React.js, JavaScript, HTML and CSS within a cross-functional development team, including the GM4 esports tournament platform.',
+        'Carried out frontend debugging, UI improvements and on-page SEO optimisation.'
       ]
     }
   ];

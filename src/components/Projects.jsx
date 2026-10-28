@@ -36,22 +36,23 @@ export default function Projects({ darkMode }) {
     {
       title: 'TrumpCore',
       subtitle: 'Banking Management System',
-      description: 'Administrative and operational dashboard panels built for banking internal workflows. Includes secure transaction tracking, reporting graphs, and client-profile management interfaces.',
+      description: 'Frontend for a centralised banking management system used for internal workflows, covering user and role management, customer accounts, transaction reporting, a real-time audit ledger and an administrative dashboard.',
       icon: <CreditCard className="w-6 h-6 text-pink-400" />,
       technologies: ['React.js', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap'],
       type: 'Client Project',
       isProprietary: false,
       features: [
         'Transaction logging and real-time audit ledger panel',
-        'Administrative dashboard with dynamic reporting charts',
-        'Client account lookup, modification, and onboarding flow',
+        'User and role management screens',
+        'Customer account handling interfaces',
+        'Transaction reporting and administrative dashboard',
         'Optimized responsive layouts for internal workspace laptops'
       ]
     },
     {
       title: 'AroyaLife',
       subtitle: 'Healthcare Application',
-      description: 'A doctor-patient communication web interface designed to simplify appointment booking, schedule management, and medical profiles for patients and healthcare providers.',
+      description: 'A healthcare management web interface for patients and doctors, covering appointment scheduling, online consultation, messaging and medical history tracking.',
       icon: <Heart className="w-6 h-6 text-emerald-400" />,
       technologies: ['React.js', 'JavaScript', 'HTML5', 'CSS3', 'SCSS'],
       type: 'Client Project',
@@ -59,7 +60,7 @@ export default function Projects({ darkMode }) {
       features: [
         'Dr. schedule calendar matching and booking interface',
         'Patient profile panel containing historical logs',
-        'Integrated messaging/notification component layout',
+        'Integrated messaging/notification component',
         'High-contrast visual layout for enhanced accessibility'
       ]
     }
